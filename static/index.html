@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Книжный магазин «Переплёт»: классика, фантастика, детективы и нон-фикшн с подборками по жанрам.">
+  <title>Главная — «Переплёт»</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+  <script type="module" src="js/home.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти к содержимому</a>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html">
+        <img src="img/logo.svg" alt="Логотип магазина «Переплёт»" width="44" height="44">
+        <span><span class="brand-name">Переплёт</span><span class="brand-tagline">книжный магазин</span></span>
+      </a>
+      <nav class="main-nav" aria-label="Основное меню">
+        <ul>
+        <li><a href="index.html" aria-current="page">Главная</a></li>
+        <li><a href="catalog.html">Каталог</a></li>
+        <li><a href="cart.html">Корзина <span class="cart-count" data-cart-count>0</span><span class="visually-hidden"> — товаров в корзине</span></a></li>
+        <li><a href="contacts.html">Контакты</a></li>
+        <li><a href="account.html"><span data-account-link>Кабинет</span></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container">
+        <div>
+          <h1 id="hero-title">Книги, к которым хочется вернуться</h1>
+          <p class="lead">«Переплёт» — небольшой книжный магазин. Собираем подборки по жанрам,
+            помогаем выбрать следующую книгу и откладываем понравившееся в список «Прочитать позже».</p>
+          <div class="hero-actions">
+            <a class="btn" href="catalog.html">Перейти в каталог</a>
+            <a class="btn btn-outline" href="login.html">Создать список «Прочитать позже»</a>
+          </div>
+        </div>
+        <div class="hero-books" aria-hidden="true">
+          <img src="img/covers/4.svg" alt="" width="300" height="450">
+          <img src="img/covers/1.svg" alt="" width="300" height="450">
+          <img src="img/covers/12.svg" alt="" width="300" height="450">
+        </div>
+      </div>
+    </section>
+
+    <section class="section container" aria-labelledby="picks-title">
+      <h2 id="picks-title">Подборки по жанру</h2>
+      <div class="genre-tabs" id="genre-tabs" role="group" aria-label="Выбор жанра подборки">
+        <button type="button" data-genre="" aria-pressed="true">Выбор редакции</button>
+      </div>
+      <p class="status loader" id="picks-status" role="status">Загружаем подборку…</p>
+      <ul class="book-grid" id="picks"></ul>
+      <p><a href="catalog.html">Весь каталог →</a></p>
+    </section>
+
+    <section class="section container" aria-labelledby="features-title">
+      <h2 id="features-title">Почему «Переплёт»</h2>
+      <div class="features">
+        <article class="card">
+          <h3>Подборки по жанрам</h3>
+          <p>Классика, фантастика, детективы, фэнтези, нон-фикшн и детские книги — у каждого жанра своя полка.</p>
+        </article>
+        <article class="card">
+          <h3>Список «Прочитать позже»</h3>
+          <p>Отмечайте книги, к которым хотите вернуться. Список хранится в личном кабинете.</p>
+        </article>
+        <article class="card">
+          <h3>Цены в любой валюте</h3>
+          <p>Цены переводятся в доллары, евро и юани по актуальному курсу Центрального банка.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div>
+        <p><strong>«Переплёт»</strong> — книжный магазин</p>
+        <p>Учебный проект по дисциплине «Введение в интернет-технологии», 2026</p>
+      </div>
+      <div>
+        <p>Санкт-Петербург, ул. Книжная, 12</p>
+        <p><a href="tel:+78120000000">+7 (812) 000-00-00</a> · <a href="contacts.html">Контакты</a></p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

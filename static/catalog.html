@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Каталог книг магазина «Переплёт» с фильтрами по жанру, цене и поиском.">
+  <title>Каталог — «Переплёт»</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+  <script type="module" src="js/catalog.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти к содержимому</a>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html">
+        <img src="img/logo.svg" alt="Логотип магазина «Переплёт»" width="44" height="44">
+        <span><span class="brand-name">Переплёт</span><span class="brand-tagline">книжный магазин</span></span>
+      </a>
+      <nav class="main-nav" aria-label="Основное меню">
+        <ul>
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="catalog.html" aria-current="page">Каталог</a></li>
+        <li><a href="cart.html">Корзина <span class="cart-count" data-cart-count>0</span><span class="visually-hidden"> — товаров в корзине</span></a></li>
+        <li><a href="contacts.html">Контакты</a></li>
+        <li><a href="account.html"><span data-account-link>Кабинет</span></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <div class="container page-title">
+      <h1>Каталог книг</h1>
+      <p class="lead">Все книги магазина. Используйте фильтры, чтобы подобрать книгу по жанру и цене.</p>
+    </div>
+
+    <div class="container catalog-layout">
+      <aside class="filters card" aria-labelledby="filters-title">
+        <h2 id="filters-title" class="h3">Фильтры</h2>
+        <form id="filter-form" novalidate>
+          <div class="field">
+            <label for="search">Название или автор</label>
+            <input id="search" name="q" type="search" maxlength="60" placeholder="Например, Лем">
+            <span class="field-error" id="search-error" aria-live="polite"></span>
+          </div>
+          <div class="field">
+            <label for="genre">Жанр</label>
+            <select id="genre" name="genre">
+              <option value="">Все жанры</option>
+            </select>
+          </div>
+          <fieldset>
+            <legend>Цена, ₽</legend>
+            <div class="price-range">
+              <div class="field">
+                <label for="min-price">от</label>
+                <input id="min-price" name="min_price" type="number" min="0" step="10" inputmode="numeric">
+                <span class="field-error" id="min-price-error" aria-live="polite"></span>
+              </div>
+              <div class="field">
+                <label for="max-price">до</label>
+                <input id="max-price" name="max_price" type="number" min="0" step="10" inputmode="numeric">
+                <span class="field-error" id="max-price-error" aria-live="polite"></span>
+              </div>
+            </div>
+          </fieldset>
+          <div class="hero-actions">
+            <button class="btn" type="submit">Показать</button>
+            <button class="btn btn-outline" type="reset">Сбросить</button>
+          </div>
+        </form>
+      </aside>
+
+      <section aria-labelledby="results-title">
+        <div class="catalog-toolbar">
+          <h2 id="results-title" class="h3"><span id="results-count">…</span></h2>
+          <div class="toolbar-controls">
+            <label for="sort">Сортировка</label>
+            <select id="sort">
+              <option value="title">по названию</option>
+              <option value="price_asc">сначала дешевле</option>
+              <option value="price_desc">сначала дороже</option>
+              <option value="year_desc">сначала новые</option>
+            </select>
+            <div class="currency-box">
+              <label for="currency">Валюта</label>
+              <select id="currency"></select>
+            </div>
+          </div>
+        </div>
+        <p class="hint" id="currency-status" aria-live="polite"></p>
+        <p class="status loader" id="catalog-status" role="status">Загружаем каталог…</p>
+        <ul class="book-grid" id="catalog"></ul>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div>
+        <p><strong>«Переплёт»</strong> — книжный магазин</p>
+        <p>Учебный проект по дисциплине «Введение в интернет-технологии», 2026</p>
+      </div>
+      <div>
+        <p>Санкт-Петербург, ул. Книжная, 12</p>
+        <p><a href="tel:+78120000000">+7 (812) 000-00-00</a> · <a href="contacts.html">Контакты</a></p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

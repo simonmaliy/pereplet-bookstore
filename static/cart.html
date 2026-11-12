@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Корзина магазина «Переплёт»: выбранные книги, количество и итоговая сумма.">
+  <title>Корзина — «Переплёт»</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+  <script type="module" src="js/cart.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти к содержимому</a>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html">
+        <img src="img/logo.svg" alt="Логотип магазина «Переплёт»" width="44" height="44">
+        <span><span class="brand-name">Переплёт</span><span class="brand-tagline">книжный магазин</span></span>
+      </a>
+      <nav class="main-nav" aria-label="Основное меню">
+        <ul>
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="catalog.html">Каталог</a></li>
+        <li><a href="cart.html" aria-current="page">Корзина <span class="cart-count" data-cart-count>0</span><span class="visually-hidden"> — товаров в корзине</span></a></li>
+        <li><a href="contacts.html">Контакты</a></li>
+        <li><a href="account.html"><span data-account-link>Кабинет</span></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <div class="container page-title">
+      <h1>Корзина</h1>
+    </div>
+
+    <div class="container cart-layout">
+      <section aria-labelledby="cart-items-title">
+        <h2 id="cart-items-title" class="visually-hidden">Выбранные книги</h2>
+        <p class="status" id="cart-status" role="status"></p>
+        <table class="cart-table" id="cart-table" hidden>
+          <thead>
+            <tr><th scope="col">Книга</th><th scope="col">Цена</th><th scope="col">Количество</th><th scope="col">Сумма</th><th scope="col"><span class="visually-hidden">Действия</span></th></tr>
+          </thead>
+          <tbody id="cart-body"></tbody>
+        </table>
+      </section>
+
+      <aside class="card summary" aria-labelledby="summary-title">
+        <h2 id="summary-title">Итого</h2>
+        <dl><dt>Книг</dt><dd id="summary-count">0</dd></dl>
+        <dl><dt>Доставка</dt><dd id="summary-delivery">—</dd></dl>
+        <dl class="total"><dt>К оплате</dt><dd id="summary-total">0 ₽</dd></dl>
+        <p class="hint">Бесплатная доставка при заказе от 1500 ₽.</p>
+        <button class="btn" type="button" id="checkout" disabled>Оформить заказ</button>
+        <p class="status" id="checkout-status" role="status"></p>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div>
+        <p><strong>«Переплёт»</strong> — книжный магазин</p>
+        <p>Учебный проект по дисциплине «Введение в интернет-технологии», 2026</p>
+      </div>
+      <div>
+        <p>Санкт-Петербург, ул. Книжная, 12</p>
+        <p><a href="tel:+78120000000">+7 (812) 000-00-00</a> · <a href="contacts.html">Контакты</a></p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

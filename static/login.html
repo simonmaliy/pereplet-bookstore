@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Вход и регистрация в магазине «Переплёт».">
+  <title>Вход — «Переплёт»</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+  <script type="module" src="js/auth.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти к содержимому</a>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html">
+        <img src="img/logo.svg" alt="Логотип магазина «Переплёт»" width="44" height="44">
+        <span><span class="brand-name">Переплёт</span><span class="brand-tagline">книжный магазин</span></span>
+      </a>
+      <nav class="main-nav" aria-label="Основное меню">
+        <ul>
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="catalog.html">Каталог</a></li>
+        <li><a href="cart.html">Корзина <span class="cart-count" data-cart-count>0</span><span class="visually-hidden"> — товаров в корзине</span></a></li>
+        <li><a href="contacts.html">Контакты</a></li>
+        <li><a href="account.html" aria-current="page"><span data-account-link>Кабинет</span></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <div class="container page-title">
+      <h1>Вход и регистрация</h1>
+      <p class="lead">Учётная запись нужна, чтобы оформлять заказы и вести список «Прочитать позже».</p>
+    </div>
+
+    <div class="container auth-layout">
+      <section class="card" aria-labelledby="login-title">
+        <h2 id="login-title">Вход</h2>
+        <form id="login-form" novalidate>
+          <div class="field">
+            <label for="login-email">E-mail</label>
+            <input id="login-email" type="email" autocomplete="email" maxlength="120">
+            <span class="field-error" id="login-email-error" aria-live="polite"></span>
+          </div>
+          <div class="field">
+            <label for="login-password">Пароль</label>
+            <input id="login-password" type="password" autocomplete="current-password" maxlength="72">
+            <span class="field-error" id="login-password-error" aria-live="polite"></span>
+          </div>
+          <button class="btn" type="submit">Войти</button>
+          <p class="status" id="login-status" role="status"></p>
+        </form>
+      </section>
+
+      <section class="card" aria-labelledby="register-title">
+        <h2 id="register-title">Регистрация</h2>
+        <form id="register-form" novalidate>
+          <div class="field">
+            <label for="reg-name">Имя</label>
+            <input id="reg-name" type="text" autocomplete="name" maxlength="60">
+            <span class="field-error" id="reg-name-error" aria-live="polite"></span>
+          </div>
+          <div class="field">
+            <label for="reg-email">E-mail</label>
+            <input id="reg-email" type="email" autocomplete="email" maxlength="120">
+            <span class="field-error" id="reg-email-error" aria-live="polite"></span>
+          </div>
+          <div class="field">
+            <label for="reg-password">Пароль</label>
+            <input id="reg-password" type="password" autocomplete="new-password" maxlength="72" aria-describedby="reg-password-hint">
+            <span class="hint" id="reg-password-hint">Не короче 8 символов, буквы и цифры</span>
+            <span class="field-error" id="reg-password-error" aria-live="polite"></span>
+          </div>
+          <div class="field">
+            <label for="reg-password2">Повторите пароль</label>
+            <input id="reg-password2" type="password" autocomplete="new-password" maxlength="72">
+            <span class="field-error" id="reg-password2-error" aria-live="polite"></span>
+          </div>
+          <button class="btn" type="submit">Зарегистрироваться</button>
+          <p class="status" id="register-status" role="status"></p>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div>
+        <p><strong>«Переплёт»</strong> — книжный магазин</p>
+        <p>Учебный проект по дисциплине «Введение в интернет-технологии», 2026</p>
+      </div>
+      <div>
+        <p>Санкт-Петербург, ул. Книжная, 12</p>
+        <p><a href="tel:+78120000000">+7 (812) 000-00-00</a> · <a href="contacts.html">Контакты</a></p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

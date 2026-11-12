@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Подробная информация о книге: описание, характеристики и цена.">
+  <title>Книга — «Переплёт»</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+  <script type="module" src="js/book.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти к содержимому</a>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html">
+        <img src="img/logo.svg" alt="Логотип магазина «Переплёт»" width="44" height="44">
+        <span><span class="brand-name">Переплёт</span><span class="brand-tagline">книжный магазин</span></span>
+      </a>
+      <nav class="main-nav" aria-label="Основное меню">
+        <ul>
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="catalog.html" aria-current="page">Каталог</a></li>
+        <li><a href="cart.html">Корзина <span class="cart-count" data-cart-count>0</span><span class="visually-hidden"> — товаров в корзине</span></a></li>
+        <li><a href="contacts.html">Контакты</a></li>
+        <li><a href="account.html"><span data-account-link>Кабинет</span></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <nav class="container breadcrumbs" aria-label="Навигационная цепочка">
+      <ol>
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="catalog.html">Каталог</a></li>
+        <li aria-current="page" id="crumb-title">Книга</li>
+      </ol>
+    </nav>
+
+    <div class="container section">
+      <p class="status loader" id="book-status" role="status">Загружаем информацию о книге…</p>
+      <article class="book-detail" id="book" hidden>
+        <img class="cover" id="book-cover" src="img/covers/1.svg" alt="" width="300" height="450">
+        <div>
+          <p class="genre-label" id="book-genre"></p>
+          <h1 id="book-title"></h1>
+          <p class="lead" id="book-author"></p>
+          <p id="book-description"></p>
+          <dl class="specs">
+            <dt>Год первой публикации</dt><dd id="book-year"></dd>
+            <dt>Страниц</dt><dd id="book-pages"></dd>
+            <dt>Переплёт</dt><dd id="book-binding"></dd>
+            <dt>Наличие</dt><dd id="book-stock"></dd>
+          </dl>
+          <div class="buy-box">
+            <span class="price" id="book-price"></span>
+            <button class="btn" type="button" id="add-to-cart">В корзину</button>
+            <button class="btn btn-outline" type="button" id="read-later">Прочитать позже</button>
+          </div>
+          <div class="currency-box">
+            <label for="currency">Показать цену в валюте</label>
+            <select id="currency"></select>
+            <span class="hint" id="currency-status" aria-live="polite"></span>
+          </div>
+          <p class="status" id="action-status" role="status"></p>
+          <details>
+            <summary>Доставка и самовывоз</summary>
+            <p>Самовывоз из магазина — бесплатно, в день заказа. Курьерская доставка по Санкт-Петербургу —
+              1–2 дня, бесплатно при заказе от 1500 ₽.</p>
+          </details>
+          <details>
+            <summary>Обмен и возврат</summary>
+            <p>Книгу без следов использования можно вернуть или обменять в течение 14 дней с чеком.</p>
+          </details>
+        </div>
+      </article>
+    </div>
+
+    <section class="container section" aria-labelledby="similar-title" id="similar-section" hidden>
+      <h2 id="similar-title">Ещё в этом жанре</h2>
+      <ul class="book-grid" id="similar"></ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div>
+        <p><strong>«Переплёт»</strong> — книжный магазин</p>
+        <p>Учебный проект по дисциплине «Введение в интернет-технологии», 2026</p>
+      </div>
+      <div>
+        <p>Санкт-Петербург, ул. Книжная, 12</p>
+        <p><a href="tel:+78120000000">+7 (812) 000-00-00</a> · <a href="contacts.html">Контакты</a></p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

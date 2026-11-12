@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Адрес, телефон и режим работы магазина «Переплёт», форма обратной связи.">
+  <title>Контакты — «Переплёт»</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+  <script type="module" src="js/contacts.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти к содержимому</a>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html">
+        <img src="img/logo.svg" alt="Логотип магазина «Переплёт»" width="44" height="44">
+        <span><span class="brand-name">Переплёт</span><span class="brand-tagline">книжный магазин</span></span>
+      </a>
+      <nav class="main-nav" aria-label="Основное меню">
+        <ul>
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="catalog.html">Каталог</a></li>
+        <li><a href="cart.html">Корзина <span class="cart-count" data-cart-count>0</span><span class="visually-hidden"> — товаров в корзине</span></a></li>
+        <li><a href="contacts.html" aria-current="page">Контакты</a></li>
+        <li><a href="account.html"><span data-account-link>Кабинет</span></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <div class="container page-title">
+      <h1>Контакты</h1>
+      <p class="slogan">«Переплёт» — книги, к которым хочется вернуться</p>
+    </div>
+
+    <div class="container contacts-layout">
+      <section class="card" aria-labelledby="address-title">
+        <h2 id="address-title">Как нас найти</h2>
+        <dl class="contact-list">
+          <dt>Адрес</dt><dd><address>Санкт-Петербург, ул. Книжная, 12</address></dd>
+          <dt>Телефон</dt><dd><a href="tel:+78120000000">+7 (812) 000-00-00</a></dd>
+          <dt>E-mail</dt><dd><a href="mailto:hello@pereplet.example">hello@pereplet.example</a></dd>
+          <dt>Режим работы</dt>
+          <dd>Пн–Пт: 10:00–21:00<br>Сб–Вс: 11:00–20:00</dd>
+        </dl>
+        <details>
+          <summary>Как добраться</summary>
+          <p>Пять минут пешком от станции метро. Вход со стороны двора, ищите вывеску с раскрытой книгой.</p>
+        </details>
+        <details>
+          <summary>Можно ли заказать книгу, которой нет в каталоге?</summary>
+          <p>Да. Напишите нам через форму обратной связи, указав тему «Заказ книги», — мы проверим наличие у поставщиков.</p>
+        </details>
+      </section>
+
+      <section class="card" aria-labelledby="feedback-title">
+        <h2 id="feedback-title">Обратная связь</h2>
+        <form id="feedback-form" novalidate>
+          <div class="field">
+            <label for="fb-name">Имя</label>
+            <input id="fb-name" name="name" type="text" autocomplete="name" maxlength="60" aria-describedby="fb-name-error">
+            <span class="field-error" id="fb-name-error" aria-live="polite"></span>
+          </div>
+          <div class="field">
+            <label for="fb-email">E-mail</label>
+            <input id="fb-email" name="email" type="email" autocomplete="email" maxlength="120" aria-describedby="fb-email-error">
+            <span class="field-error" id="fb-email-error" aria-live="polite"></span>
+          </div>
+          <div class="field">
+            <label for="fb-topic">Тема</label>
+            <select id="fb-topic" name="topic" aria-describedby="fb-topic-error">
+              <option value="">— выберите тему —</option>
+              <option>Вопрос о заказе</option>
+              <option>Заказ книги</option>
+              <option>Предложение</option>
+              <option>Другое</option>
+            </select>
+            <span class="field-error" id="fb-topic-error" aria-live="polite"></span>
+          </div>
+          <div class="field">
+            <label for="fb-message">Сообщение</label>
+            <textarea id="fb-message" name="message" maxlength="1000" aria-describedby="fb-message-hint fb-message-error"></textarea>
+            <span class="hint" id="fb-message-hint"><span id="fb-message-count">0</span> / 1000 символов, не менее 10</span>
+            <span class="field-error" id="fb-message-error" aria-live="polite"></span>
+          </div>
+          <div class="field">
+            <label class="checkbox" for="fb-consent">
+              <input id="fb-consent" name="consent" type="checkbox" aria-describedby="fb-consent-error">
+              <span>Согласен на обработку персональных данных</span>
+            </label>
+            <span class="field-error" id="fb-consent-error" aria-live="polite"></span>
+          </div>
+          <button class="btn" type="submit">Отправить</button>
+          <p class="status" id="feedback-status" role="status"></p>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div>
+        <p><strong>«Переплёт»</strong> — книжный магазин</p>
+        <p>Учебный проект по дисциплине «Введение в интернет-технологии», 2026</p>
+      </div>
+      <div>
+        <p>Санкт-Петербург, ул. Книжная, 12</p>
+        <p><a href="tel:+78120000000">+7 (812) 000-00-00</a> · <a href="contacts.html">Контакты</a></p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

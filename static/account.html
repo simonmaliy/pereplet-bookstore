@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Личный кабинет: профиль, список «Прочитать позже» и заказы.">
+  <title>Личный кабинет — «Переплёт»</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+  <script type="module" src="js/account.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти к содержимому</a>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html">
+        <img src="img/logo.svg" alt="Логотип магазина «Переплёт»" width="44" height="44">
+        <span><span class="brand-name">Переплёт</span><span class="brand-tagline">книжный магазин</span></span>
+      </a>
+      <nav class="main-nav" aria-label="Основное меню">
+        <ul>
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="catalog.html">Каталог</a></li>
+        <li><a href="cart.html">Корзина <span class="cart-count" data-cart-count>0</span><span class="visually-hidden"> — товаров в корзине</span></a></li>
+        <li><a href="contacts.html">Контакты</a></li>
+        <li><a href="account.html" aria-current="page"><span data-account-link>Кабинет</span></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <div class="container page-title">
+      <h1>Личный кабинет</h1>
+    </div>
+
+    <div class="container">
+      <p class="status loader" id="account-status" role="status">Проверяем вход…</p>
+    </div>
+
+    <div class="container account-layout" id="account" hidden>
+      <section class="card" aria-labelledby="profile-title">
+        <h2 id="profile-title">Профиль</h2>
+        <dl class="specs">
+          <dt>Имя</dt><dd id="profile-name"></dd>
+          <dt>E-mail</dt><dd id="profile-email"></dd>
+          <dt>С нами с</dt><dd id="profile-date"></dd>
+        </dl>
+        <button class="btn btn-outline" type="button" id="logout">Выйти</button>
+      </section>
+
+      <div>
+        <section class="card" aria-labelledby="reading-title">
+          <h2 id="reading-title">Прочитать позже</h2>
+          <p class="hint" id="reading-empty" hidden>Список пуст. Нажмите «Прочитать позже» на странице книги.</p>
+          <div id="reading-list"></div>
+        </section>
+        <section class="card section" aria-labelledby="orders-title">
+          <h2 id="orders-title">Мои заказы</h2>
+          <p class="hint" id="orders-empty" hidden>Заказов пока нет.</p>
+          <div id="orders"></div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div>
+        <p><strong>«Переплёт»</strong> — книжный магазин</p>
+        <p>Учебный проект по дисциплине «Введение в интернет-технологии», 2026</p>
+      </div>
+      <div>
+        <p>Санкт-Петербург, ул. Книжная, 12</p>
+        <p><a href="tel:+78120000000">+7 (812) 000-00-00</a> · <a href="contacts.html">Контакты</a></p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
